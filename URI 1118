@@ -35,8 +35,7 @@ namespace URI___validacaoDeNota4
                 }
 
                 if (x == 2)
-                {
-                    //s = 0;
+                {                    
                     media = soma / 2.00;
 
                     Console.WriteLine("media = " + media.ToString("F2", CultureInfo.InvariantCulture));
