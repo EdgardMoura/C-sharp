@@ -3,54 +3,48 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Globalization;
 
-namespace URI___tipoCombustivel
+namespace URI___validacaoDeNota4
 {
     class Program
     {
         static void Main(string[] args)
         {
-            int num, x, y, z;
-            x = 0;
-            y = 0;
-            z = 0;
+            int n;
+            double nota, nota1, mediaF, nota2;
 
-            string[] vet = { "Alcool", "Gasolina", "Diesel" };
-            string a = vet[0];
-            string b = vet[1];
-            string c = vet[2];
+            n = 0;
+            mediaF = 0;
+            nota = 0;
+            nota1 = 0;
+            nota2 = 0;
+                       
+            while (n < 2)
+            {
+                nota = double.Parse(Console.ReadLine());
 
-            num = int.Parse(Console.ReadLine());
-
-            while (num != 4)
-
-                if (num > 0 && num < 4)
+                if (nota < 0.0 || nota > 10.0)
                 {
-                    if (num == 1)
-                    {
-                        x++;
-                    }
-                    else if (num == 2)
-                    {
-                        y++;
-                    }
-                    else if (num == 3)
-                    {
-                        z++;
-                    }                    
-                    
-                    num = int.Parse(Console.ReadLine());
+                    Console.WriteLine("nota invalida");
                 }
-            
-                else
+                if (nota >= 0.0 && nota <= 10.0)
                 {
-                    num = int.Parse(Console.ReadLine());
+                    if (nota1 == 0)
+                    {
+                        nota1 = nota;
+                        n++;
+                    }
+                    else
+                    {
+                        nota2 = nota;
+                        n++;
+                    }
                 }
-            Console.WriteLine("MUITO OBRIGADO");
-            Console.WriteLine(a + ": " + x);
-            Console.WriteLine(b + ": " + y);
-            Console.WriteLine(c + ": " + z);
+            }
+            mediaF = (nota1 + nota2) / 2.00;
 
+            Console.WriteLine("media = " + mediaF.ToString("F2", CultureInfo.InvariantCulture));
             //Console.ReadKey();
         }
     }
