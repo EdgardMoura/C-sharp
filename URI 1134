@@ -1,0 +1,57 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace URI___tipoCombustivel
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int num, x, y, z;
+            x = 0;
+            y = 0;
+            z = 0;
+
+            string[] vet = { "Alcool", "Gasolina", "Diesel" };
+            string a = vet[0];
+            string b = vet[1];
+            string c = vet[2];
+
+            num = int.Parse(Console.ReadLine());
+
+            while (num != 4)
+
+                if (num > 0 && num < 4)
+                {
+                    if (num == 1)
+                    {
+                        x++;
+                    }
+                    else if (num == 2)
+                    {
+                        y++;
+                    }
+                    else if (num == 3)
+                    {
+                        z++;
+                    }                    
+                    
+                    num = int.Parse(Console.ReadLine());
+                }
+            
+                else
+                {
+                    num = int.Parse(Console.ReadLine());
+                }
+            Console.WriteLine("MUITO OBRIGADO");
+            Console.WriteLine(a + ": " + x);
+            Console.WriteLine(b + ": " + y);
+            Console.WriteLine(c + ": " + z);
+
+            //Console.ReadKey();
+        }
+    }
+}
