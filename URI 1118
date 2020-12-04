@@ -1,0 +1,72 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Globalization;
+
+namespace URI___validacaoDeNota4
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int x, s;
+            double nota, media, soma;
+
+            x = 0;
+            s = 0;
+            media = 0;
+            nota = 0;
+            soma = 0;
+
+            while (x != 2)
+            {
+                nota = double.Parse(Console.ReadLine());
+
+                if (nota < 0.0 || nota > 10.0)
+                {
+                    Console.WriteLine("nota invalida");
+                }
+                if (nota >= 0.0 && nota <= 10.0)
+                {
+                    soma = soma + nota;
+                    x++;
+                }
+
+                if (x == 2)
+                {
+                    //s = 0;
+                    media = soma / 2.00;
+
+                    Console.WriteLine("media = " + media.ToString("F2", CultureInfo.InvariantCulture));
+                    Console.WriteLine("novo calculo (1-sim 2-nao)");
+                    s = int.Parse(Console.ReadLine());
+                    while (s < 1 || s > 2)
+                    {
+                        Console.WriteLine("novo calculo (1-sim 2-nao)");
+                        s = int.Parse(Console.ReadLine());
+                        if (s == 1)
+                            x = 0;
+                        soma = 0;
+                        {
+                            if (s == 2)
+                            {
+                                x = 2;
+                            }
+                        }
+                    }
+                    if (s == 1)
+                    {
+                        x = 0;
+                        soma = 0;
+                    }
+                    else
+                    {
+                        x = 2;
+                    }
+                }
+            }
+        }
+    }
+}
