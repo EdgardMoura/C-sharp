@@ -1,0 +1,72 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace URI___grenais
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int golInter, golGremio, x, grenais, golI, golG, empates, inter, gremio;
+
+
+            x = 0;
+            grenais = 0;
+            golInter = 0;
+            golGremio = 0;
+            empates = 0;
+            inter = 0;
+            gremio = 0;
+
+
+            while (x != 2)
+            {
+                string[] vet = Console.ReadLine().Split(' ');
+                Console.WriteLine("Novo grenal (1-sim 2-nao)");
+                x = int.Parse(Console.ReadLine());
+                grenais++;
+                
+                golI = int.Parse(vet[0]);
+                golG = int.Parse(vet[1]);
+
+                golInter = golInter + golI;
+                golGremio = golGremio + golG;
+
+                if (golI == golG)
+                {
+                    empates++;
+                }
+                else if (golI > golG)
+                {
+                    inter++;
+                }
+                else
+                {
+                    gremio++;
+                }
+            }
+
+            Console.WriteLine(grenais + " grenais");
+            Console.WriteLine("Inter:" + inter);
+            Console.WriteLine("Gremio:" + gremio);
+            Console.WriteLine("Empates:" + empates);
+            if (inter > gremio)
+            {
+                Console.WriteLine("Inter venceu mais");
+            }
+            else if ( gremio > inter)
+            {
+                Console.WriteLine("Gemio venceu mais");
+            }
+            else
+            {
+                Console.WriteLine("Nao houve vencedor");
+            }
+            //Console.ReadKey();
+
+        }
+    }
+}
