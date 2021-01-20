@@ -1,0 +1,7 @@
+C:\Users\edgkb\source\repos\Pensionato\Pensionato\bin\Debug\Pensionato.exe.config
+C:\Users\edgkb\source\repos\Pensionato\Pensionato\bin\Debug\Pensionato.exe
+C:\Users\edgkb\source\repos\Pensionato\Pensionato\bin\Debug\Pensionato.pdb
+C:\Users\edgkb\source\repos\Pensionato\Pensionato\obj\Debug\Pensionato.csprojAssemblyReference.cache
+C:\Users\edgkb\source\repos\Pensionato\Pensionato\obj\Debug\Pensionato.csproj.CoreCompileInputs.cache
+C:\Users\edgkb\source\repos\Pensionato\Pensionato\obj\Debug\Pensionato.exe
+C:\Users\edgkb\source\repos\Pensionato\Pensionato\obj\Debug\Pensionato.pdb
